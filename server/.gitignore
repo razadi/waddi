@@ -1,0 +1,3 @@
+# Omitir al subir a github
+node_modules/
+.env

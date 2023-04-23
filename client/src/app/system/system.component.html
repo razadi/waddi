@@ -1,0 +1,26 @@
+<nav class="navbar fixed-top navbar-expand-md navbar-light white double-nav scrolling-navbar">
+  <div class="toolbar" role="banner">
+    <div class="col-sm-6">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link text-white" [routerLink]="'/home'" routerLinkActive="active">Posts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" [routerLink]="'/users'" routerLinkActive="active"
+            *ngIf="user.role==='ADMIN_ROLE'">Usuarios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" [routerLink]="'/bitacora'" routerLinkActive="active"
+            *ngIf="user.role==='ADMIN_ROLE'">Bitácora</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-sm-6">
+      <span class="employee"><b><i class='fas fa-user'></i> waddi posts</b></span>
+    </div>
+  </div>
+</nav>
+
+<div class="bodyr">
+  <router-outlet></router-outlet>
+</div>

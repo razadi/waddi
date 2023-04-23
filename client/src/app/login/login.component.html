@@ -1,0 +1,28 @@
+<p>login works!</p>
+
+
+<div class="card login">
+  <div class="card-body">
+    <form [formGroup]="validateForm" class="row g-3 needs-validation" (ngSubmit)="submit()">
+      <div class="col-md-12">
+        <label for="validationCustom01" class="form-label">eMail</label>
+        <input type="email" class="form-control" formControlName="mail" placeholder="name@example.com">
+        <small class="text-danger" *ngIf="validateForm.controls['mail'].invalid &&
+        (validateForm.controls['mail'].dirty || validateForm.controls['mail'].touched)">
+          Es requerido y tipo email
+        </small>
+      </div>
+      <div class="col-md-12">
+        <label for="validationCustom01" class="form-label">Password</label>
+        <input type="password" class="form-control" formControlName="password" required>
+        <small class="text-danger" *ngIf="validateForm.controls['password'].invalid &&
+        (validateForm.controls['password'].dirty || validateForm.controls['password'].touched)">
+          Es requerido!
+        </small>
+      </div>
+      <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-primary" [disabled]="!validateForm.valid">Login</button>
+      </div>
+    </form>
+  </div>
+</div>

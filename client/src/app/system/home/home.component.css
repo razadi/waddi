@@ -1,0 +1,12 @@
+.top{
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.posts{
+  width: 100%;
+  height: 80vh;
+  border: solid 1px #64437d;
+  overflow: auto;
+}
